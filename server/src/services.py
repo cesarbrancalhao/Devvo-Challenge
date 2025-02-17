@@ -2,7 +2,7 @@ from .models import Anel
 
 class AnelService:
     @staticmethod
-    def create_or_update_anel(data):
+    def check_anel(data):
         forjador = data['forjadoPor']
         forjados = Anel.objects.filter(forjadoPor=forjador)
 
@@ -18,5 +18,20 @@ class AnelService:
         if forjador == 'H' and forjados.count() > 9:
             return 'Os homens já forjaram 9 anéis!'
         
+        return False
+
+    @staticmethod
+    def create(data):
         anel = Anel.objects.create(**data)
+        return anel
+        
+    @staticmethod
+    def update(data, id):
+        anel = Anel.objects.get(id=id)
+        anel.nome = data['nome']
+        anel.poder = data['poder']
+        anel.portador = data['portador']
+        anel.forjadoPor = data['forjadoPor']
+        anel.imagem = data['imagem']
+        anel.save()
         return anel
