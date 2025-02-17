@@ -51,7 +51,7 @@ O backend irá rodar em `http://localhost:8000`
 1. Abra um novo terminal na pasta client:
 ```bash
 cd client
-python -m http.server 5000Tes
+python -m http.server 5000
 ```
 
 O frontend estará disponível em `http://localhost:5000`
