@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Forjar Anel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="action-box">
+            <h2>Forjar Anel</h2>
+            <form id="form">
+                <div class="form-group">
+                    <label for="nome">Nome do Anel</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="poder">Poder</label>
+                    <textarea id="poder" name="poder" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="portador">Portador</label>
+                    <input type="text" id="portador" name="portador" required>
+                </div>
+                <div class="form-group">
+                    <label for="forjadoPor">Forjadores do anel</label>
+                    <select id="forjadoPor" name="forjadoPor" required>
+                        <option value="E">Elfos</option>
+                        <option value="A">Anões</option>
+                        <option value="H">Homens</option>
+                        <option value="S">Sauron</option>
+                    </select>
+                </div>
+
+                <div id="customImgBox" class="form-group">
+                    <label for="imagem">Link da foto do anel</label>
+                    <input type="url" id="imagem" name="imagem" required>
+                </div>
+
+                <div id="defaultImgBox">
+                    <div class="form-group">
+                        <label>Ou escolha uma imagem:</label>
+                        <div class="image-options">
+                            <div class="image-option">
+                                <input type="radio" id="img1" name="imgopt" value="https://static.wikia.nocookie.net/lotr/images/9/94/Narya.gif/revision/latest?cb=20080206202813">
+                                <label for="img1">
+                                    <img src="https://static.wikia.nocookie.net/lotr/images/9/94/Narya.gif/revision/latest?cb=20080206202813" alt="Anel 1">
+                                </label>
+                            </div>
+                            <div class="image-option">
+                                <input type="radio" id="img2" name="imgopt" value="https://static.wikia.nocookie.net/lotr/images/5/55/Nenya.gif/revision/latest?cb=20090705165608">
+                                <label for="img2">
+                                    <img src="https://static.wikia.nocookie.net/lotr/images/5/55/Nenya.gif/revision/latest?cb=20090705165608" alt="Anel 2">
+                                </label>
+                            </div>
+                            <div class="image-option">
+                                <input type="radio" id="img3" name="imgopt" value="https://static.wikia.nocookie.net/lotr/images/5/5c/Vilya.gif/revision/latest?cb=20090705165752">
+                                <label for="img3">
+                                    <img src="https://static.wikia.nocookie.net/lotr/images/5/5c/Vilya.gif/revision/latest?cb=20090705165752" alt="Anel 3">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="action-button">Forjar</button>
+                <button type="button" class="action-button" onclick="window.location.href='index.html'">Voltar</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/anel.js"></script>
+</body>
+</html>
